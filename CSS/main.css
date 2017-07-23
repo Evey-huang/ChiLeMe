@@ -6,6 +6,9 @@ ul{list-style:none;}
 .clear:after{clear:both;display:block;height:0px;content:'';zoom:1;overflow:hidden;}
 .clearfix{clear:both;zoom:1;}
 .clearfix:after{display:block;overflow:hidden;clear:both;height:0;visibility:hidden;content:""}
+body{
+	background:#eee;
+}
 /*topBar*/
 .topBarNav,.topBarNavLogin,.topBarList{
 	display:inline-block;
@@ -93,8 +96,53 @@ ul{list-style:none;}
 	width:30px;
 	display:inline-block;
 }
-.order{
+.order,.msg{
 	padding:10px 0;
+	position:relative;
+	z-index:2;
+}
+.order:hover,.msg:hover{
+	z-index:3;
+	background:none;
+}
+.order span,.msg span{
+	display:none;
+}
+.order:hover span，.order:hover b,.msg:hover span,.msg:hover b{
+	opacity:0.9;/*设置透明度*/
+	filter:alpha(opacity=90);
+}
+.order:hover span,.msg:hover span{
+	display:block;
+	position:absolute;
+	top:5px;
+	right:40px;
+	
+	width:60px;
+	padding:8px 10px;
+	
+	color:#fff;
+	background-color:#666;
+	
+	font-size:14px;
+	/*设置圆角*/
+	-webkit-border-radius:5px;  
+    -moz-border-radius:5px;  
+    border-radius:5px; 
+	
+}
+.order:hover b,.msg:hover b{/*设置三角形箭头*/
+	position:absolute;  
+    top:11px;  
+    right:32px; 
+ 
+    width:0;  
+    height:0;  
+
+    border-top:10px solid transparent;  
+    border-bottom:10px solid transparent;  
+    border-left:10px solid #666; 
+	z-index:-1; 
 }
 .shopCar{
 	padding:13px 0;
