@@ -40,6 +40,16 @@ ul{list-style:none;}
 	margin-left:70px;
 	float:left;
 }
+.topBarLogo b{
+	display:inline-block;
+	width:32px;
+	height:32px;
+	padding-right:5px;
+	background:url(../images/logo.png) no-repeat;
+}
+.topBarNav a,.topBarNavLogin a{
+	font-size:14px;
+}
 .topBarNav{
 	margin:0 120px 0 180px;
 }
@@ -49,4 +59,49 @@ ul{list-style:none;}
 }
 .topBarNav a:hover{
 	color:#fff;
+}
+.topBarNav .fa,.topBarNavLogin .fa{
+	font-size:23px;
+}
+.topBar .fa{
+	padding-right:5px;
+}
+/*--------sideBar------*/
+.sideBar{
+	position:fixed;
+	top:0px;
+	bottom:0px;
+	right:0px;
+	
+	width:30px;
+	margin:0 auto;
+	background-color:#504d53;
+}
+.sideBarTabs{
+	text-align:center;
+	margin-top:100px;
+}
+.sideBarTabs a{
+	color:#ccc;
+}
+.separator{
+	border-bottom:1px solid #737074;
+	height:2px;
+	margin:5px 6px;
+}
+.order,.shopCar,.msg{
+	width:30px;
+	display:inline-block;
+}
+.order{
+	padding:10px 0;
+}
+.shopCar{
+	padding:13px 0;
+}
+.msg{
+	padding:8px 0;
+}
+.order:hover,.shopCar:hover,.msg:hover{
+	background-color:#0089dc;
 }
