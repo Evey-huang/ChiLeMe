@@ -18,6 +18,7 @@ body{
 }
 .topBar{
 	width:100%;
+	min-width:1400px;/*解决屏幕缩小发生错位问题*/
 	height:60px;
 	line-height:60px;
 	background-color:#1e89e0;
@@ -54,7 +55,7 @@ body{
 	font-size:14px;
 }
 .topBarNav{
-	margin:0 120px 0 180px;
+	margin:0 80px 0 160px;
 }
 .topBarNav a{
 	margin:0 20px 0 20px;
@@ -153,3 +154,17 @@ body{
 .order:hover,.shopCar:hover,.msg:hover{
 	background-color:#0089dc;
 }
+/*------footer-----*/
+/*.footerLinks,.footerContect{
+	display:inline-block;
+}
+.footerLinks a{
+	display:block;
+}
+.footerQrCode{
+	float:right;
+}
+.footerQrCode img{
+	width:90px;
+	height:90px;
+}*/

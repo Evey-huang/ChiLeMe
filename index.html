@@ -6,9 +6,26 @@
 <link type="text/css" rel="stylesheet" href="CSS/main.css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="shortcut icon" href="favicon.ico">
+<style type="text/css">
+.searchBox{
+	float:right;
+	position:relative;
+	z-index:3;
+	margin:10px 110px 10px 0;
+	height:32px;
+	background:#fff;
+	border:1px solid #ccc;
+	color:#999;
+	
+}
+.searchBox i{
+	color:#999;
+}
+</style>
 </head>
 <body>
-	<div class="topBar">
+
+	<div class="topBar clearfix">
 		<h1 class="topBarLogo"><b></b>吃了么</h1>
 		<div class="topBarList">
 			<a href="index.html" class="homePage">首页</a>
@@ -32,11 +49,52 @@
 			<div class="separator"></div>
 			<a class="tabsBtn msg" href="#" tooltips="我的信息"><i class="fa fa-envelope-o"></i><span>我的信息</span><b></b></a>
 		</div>
-		
 	</div>
-	<div class="container">
+	<div class="container clearfix">
+		<div class="searchBox">
+			<a href="#"><i class="fa fa-search"></i></a>
+			<label>搜索商家/美食</label>
+			<input class="searchInput">
+		</div>
+		<div class="classify"></div>
+		<div class="contentBox"></div>
 	</div>
-	<div class="footer">
-	</div>
+	<!-- <div class="footer clearfix">
+		<div class="footerLinks help">
+			<h3 class="linksTitle">用户帮助</h3>
+			<a href="#">服务中心</a>
+			<a href="#">常见问题</a>
+		</div>
+		<div class="footerLinks cooperation">
+			<h3 class="linksTitle">商务合作</h3>
+			<a href="#">我要开店</a>
+			<a href="#">加盟指南</a>
+			<a href="#">市场合作</a>
+			<a href="#">开放平台</a>
+		</div>
+		<div class="footerLinks about">
+			<h3 class="linksTitle">关于我们</h3>
+			<a href="#">吃了么介绍</a>
+			<a href="#">加入我们</a>
+			<a href="#">联系我们</a>
+			<a href="#">规则中心</a>
+		</div>
+		<div class="footerContect">
+			<ul>
+				<li>24小时客服热线：<a>1234567</a></li>
+				<li>意见反馈：<a>12345@163.com</a></li>
+				<li>关注我们：<a><i></i><i></i></a></li>
+			</ul>
+		</div>
+		<div class="footerQrCode">
+			<a href="#"><img src="http://faas.elemecdn.com/desktop/media/img/appqc.95e532.png"></a>
+			<h3>下载手机版</h3>
+			<p>扫一扫，手机订餐更方便</p>
+		</div>
+		<div class="footerCopyRight">
+		           技术支持Team.S copyright&copy2004-2017 Team.S 版权所有
+		</div>
+	</div> -->
+
 </body>
 </html>
