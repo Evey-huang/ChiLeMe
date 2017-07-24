@@ -159,16 +159,60 @@ body{
 	background-color:#0089dc;
 }
 /*------footer-----*/
-/*.footerLinks,.footerContect{
+.footer{
+	position:relative;
+	width:1200px;
+	margin:0 auto;
+	margin-top:40px;
+	border-top:1px solid #e6e6e6;
+}
+.footer h3{
+	font-weight:400;
+	font-size:16px;
+}
+.footer a{
+	color:#999;
+	font-size:14px;
+}
+.footerLinks,.footerContect,.footerQrCode{
+	margin-top:30px;
+}
+.footerLinks{
+	width:15%;
+	float:left;
+}
+.footerLinks,.footerContect{
 	display:inline-block;
+}
+.footerContect{
+	border-left:1px solid #e6e6e6;
+	padding-left:3%;
+	width: 23%;
 }
 .footerLinks a{
 	display:block;
 }
 .footerQrCode{
+	position:absolute;
+	top:0;
+	right:0;
+	margin-right:40px;
+}
+.qrCodeRight{
 	float:right;
+	margin:15px 0 10px 10px;
+}
+.qrCodeRight p{
+	font-size:12px;
+	color:#666;
 }
 .footerQrCode img{
 	width:90px;
 	height:90px;
-}*/
+}
+.footerCopyRight{
+	margin-top:70px;
+	font-size:14px;
+	color:#666;
+	text-align:center;
+}

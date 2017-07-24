@@ -9,8 +9,6 @@
 <style type="text/css">
 .container{
 	width:1200px;
-	/*height:200px;*/
-	border:1px solid red;
 	margin:0 auto;
 }
 /*搜索框部分*/
@@ -87,6 +85,98 @@
 	color:#fff;
 	height:40px;
 }
+/*主体部分 contentBox*/
+.contentBox{
+	margin-top: 20px;
+	background: #fff;
+	border: 1px solid #e6e6e6;
+	font-size: 0;	
+}
+.contentBox a{
+	border-bottom: 1px #f5f5f5 solid;
+	width:25%;
+	display: inline-block;
+	font-size:16px;
+}
+.contentBox a:hover{
+	background: #eee;
+	filter:alpha(Opacity=80);/*背景透明*/
+	-moz-opacity:0.8;
+	opacity: 0.8;
+}
+.restaurantLogo{
+	float:left;
+	position:relative;
+	display:inline-block;
+	padding:25px;
+}
+.restaurantLogo span{
+	position: absolute;
+	left:35px;
+	bottom: 5px;
+	font-size: 12px;
+	padding-top: 10px;
+}
+.resIntroduce{
+	padding:29px;
+}
+.resIntroduce h3{
+	color:#000;
+	font-size:1em;
+}
+.resIntroduce h3:hover{
+	color:#0089dc;
+}
+.resIntroduce .sale,.resIntroduce p{
+	color:#999;
+	font-size: 14px;
+}
+/*评级五角星*/
+.starrating{
+	position: relative;
+    display: inline-block;
+    line-height: 1em;
+    color: #ccc;
+	
+	font-family: eleme;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    -webkit-font-feature-settings: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.starrating span:before, .starrating:before {
+    content: "\e950\e950\e950\e950\e950";
+}
+.star{
+	font-family: eleme;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    -webkit-font-feature-settings: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.star:before {
+    content: "\e950";
+}
+.starrating span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    color: #ffc30c;
+    white-space: nowrap;
+}
 </style>
 <script>
 //实现搜索框横向伸展效果
@@ -127,7 +217,7 @@ function showtext(){
 	<div class="topBar clearfix">
 		<h1 class="topBarLogo"><b></b>吃了么</h1>
 		<div class="topBarList" id="topBarList">
-			<a href="index.html" target="_blank">首页</a>
+			<a href="index.html">首页</a>
 			<a href="#">我的订单</a>
 			<a href="#">加盟合作</a>
 		</div>
@@ -186,10 +276,122 @@ function showtext(){
 			</div>
 		</div>
 		<div class="contentBox">
-		
-		</div>
+		<!-- ********商家********* -->
+			<a href="#" class="resBox clearfix">
+				<div class="restaurantLogo">
+					<img alt="站前餐馆" src="images/resLogo.jpeg">
+					<span>30分钟</span><!-- 平均送达时间 -->
+				</div>
+				<div class="resIntroduce">
+					<h3>站前餐馆</h3>
+					<div class="starrating"><!-- 评级 -->
+					   <span class="star"></span>
+					</div>
+					<span class="sale">月售2000单</span>
+					<p>免配送费</p>
+				</div>
+			</a>
+			<a href="#" class="clearfix">
+				<div class="restaurantLogo">
+					<img alt="站前餐馆" src="images/resLogo.jpeg">
+					<span>30分钟</span><!-- 平均送达时间 -->
+				</div>
+				<div class="resIntroduce">
+					<h3>站前餐馆</h3>
+					<div class="starrating"><!-- 评级 -->
+					   <span class="star"></span>
+					</div>
+					<span class="sale">月售2000单</span>
+					<p>免配送费</p>
+				</div>
+			</a>
+			<a href="#" class="clearfix">
+				<div class="restaurantLogo">
+					<img alt="站前餐馆" src="images/resLogo.jpeg">
+					<span>30分钟</span><!-- 平均送达时间 -->
+				</div>
+				<div class="resIntroduce">
+					<h3>站前餐馆</h3>
+					<div class="starrating"><!-- 评级 -->
+					   <span class="star"></span>
+					</div>
+					<span class="sale">月售2000单</span>
+					<p>免配送费</p>
+				</div>
+			</a>
+			<a href="#" class="clearfix">
+				<div class="restaurantLogo">
+					<img alt="站前餐馆" src="images/resLogo.jpeg">
+					<span>30分钟</span><!-- 平均送达时间 -->
+				</div>
+				<div class="resIntroduce">
+					<h3>站前餐馆</h3>
+					<div class="starrating"><!-- 评级 -->
+					   <span class="star"></span>
+					</div>
+					<span class="sale">月售2000单</span>
+					<p>免配送费</p>
+				</div>
+			</a>
+			<a href="#" class="clearfix">
+				<div class="restaurantLogo">
+					<img alt="站前餐馆" src="images/resLogo.jpeg">
+					<span>30分钟</span><!-- 平均送达时间 -->
+				</div>
+				<div class="resIntroduce">
+					<h3>站前餐馆</h3>
+					<div class="starrating"><!-- 评级 -->
+					   <span class="star"></span>
+					</div>
+					<span class="sale">月售2000单</span>
+					<p>免配送费</p>
+				</div>
+			</a>
+			<a href="#" class="clearfix">
+				<div class="restaurantLogo">
+					<img alt="站前餐馆" src="images/resLogo.jpeg">
+					<span>30分钟</span><!-- 平均送达时间 -->
+				</div>
+				<div class="resIntroduce">
+					<h3>站前餐馆</h3>
+					<div class="starrating"><!-- 评级 -->
+					   <span class="star"></span>
+					</div>
+					<span class="sale">月售2000单</span>
+					<p>免配送费</p>
+				</div>
+			</a>
+			<a href="#" class="clearfix">
+				<div class="restaurantLogo">
+					<img alt="站前餐馆" src="images/resLogo.jpeg">
+					<span>30分钟</span><!-- 平均送达时间 -->
+				</div>
+				<div class="resIntroduce">
+					<h3>站前餐馆</h3>
+					<div class="starrating"><!-- 评级 -->
+					   <span class="star"></span>
+					</div>
+					<span class="sale">月售2000单</span>
+					<p>免配送费</p>
+				</div>
+			</a>
+			<a href="#" class="clearfix">
+				<div class="restaurantLogo">
+					<img alt="站前餐馆" src="images/resLogo.jpeg">
+					<span>30分钟</span><!-- 平均送达时间 -->
+				</div>
+				<div class="resIntroduce">
+					<h3>站前餐馆</h3>
+					<div class="starrating"><!-- 评级 -->
+					   <span class="star"></span>
+					</div>
+					<span class="sale">月售2000单</span>
+					<p>免配送费</p>
+				</div>
+			</a>
+		</div><!-- *********商家结束********** -->
 	</div>
-	<!-- <div class="footer clearfix">
+	<div class="footer clearfix">
 		<div class="footerLinks help">
 			<h3 class="linksTitle">用户帮助</h3>
 			<a href="#">服务中心</a>
@@ -213,18 +415,24 @@ function showtext(){
 			<ul>
 				<li>24小时客服热线：<a>1234567</a></li>
 				<li>意见反馈：<a>12345@163.com</a></li>
-				<li>关注我们：<a><i></i><i></i></a></li>
+				<li>
+					关注我们：
+					<a href="#"><i class="fa fa-qq"></i></a>
+					<a href="#"><i class="fa fa-facebook"></i></a>
+				</li>
 			</ul>
 		</div>
-		<div class="footerQrCode">
+		<div class="footerQrCode clearfix">
 			<a href="#"><img src="http://faas.elemecdn.com/desktop/media/img/appqc.95e532.png"></a>
-			<h3>下载手机版</h3>
-			<p>扫一扫，手机订餐更方便</p>
+			<div class="qrCodeRight">
+				<h3>下载手机版</h3>
+				<p>扫一扫，手机订餐更方便</p>
+			</div>
 		</div>
 		<div class="footerCopyRight">
-		           技术支持Team.S copyright&copy2004-2017 Team.S 版权所有
+		           技术支持Team.S&nbsp;&nbsp;copyright&copy&nbsp;2004-2017&nbsp;&nbsp;Team.S 版权所有
 		</div>
-	</div> -->
+	</div>
 
 </body>
 </html>
