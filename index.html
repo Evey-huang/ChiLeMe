@@ -7,28 +7,127 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="shortcut icon" href="favicon.ico">
 <style type="text/css">
+.container{
+	width:1200px;
+	/*height:200px;*/
+	border:1px solid red;
+	margin:0 auto;
+}
+/*搜索框部分*/
+.wrapperBox{
+	margin:10px 0px 50px 0;
+	height:32px;
+}
 .searchBox{
 	float:right;
 	position:relative;
 	z-index:3;
-	margin:10px 110px 10px 0;
-	height:32px;
 	background:#fff;
 	border:1px solid #ccc;
-	color:#999;
-	
+	color:#999;	
 }
 .searchBox i{
+	float:right;
+	color:#999;
+	width:46px;
+	height:inherit;
+	line-height:32px;
+	text-align: center;
+	font-size:20px;
+}
+.searchBox input{
+	width:180px;
+	height:30px;
+	border:0;
+	outline: none;
+}
+.searchBox span{
+	padding-right:10px;
+}
+/*分类部分*/
+.classifyWrapper{
+	padding:10px 0 0 10px;
+	background:#fff;
+	border: 1px solid #e6e6e6;
+	font-size:15px;
+}
+.classifyWrapper a{
+	color:#666;
+	width:40px;
+	height:36px;
+	line-height:36px;
+	padding:5px 15px;
+}
+.classify span{
 	color:#999;
 }
+.classify a:hover,.classify a:focus{
+	background:#f6f6f6;
+}
+.classify a:focus{
+	color:#fff;
+}
+.space{
+	margin-right:70px;
+}
+#details{
+	display: none;
+	background:#f6f6f6;
+	padding:10px;
+	margin:10px;
+	color:#fff;
+	margin-left:70px;
+}
+#details a:focus{
+	background: #0089dc;
+	color:#fff;
+}
+#details a:nth-child(1){
+	background: #0089dc;
+	color:#fff;
+	height:40px;
+}
 </style>
+<script>
+//实现搜索框横向伸展效果
+window.onload=function(){
+    var aA=document.getElementsByTagName('input');
+	for(var i=0; i<aA.length; i++){
+		aA[i].onmouseover=function(){
+			var This=this;
+			clearInterval(This.time);/*清除计时器*/
+			This.time=setInterval(function(){/*设定计时器*/
+					This.style.width=This.offsetWidth+8+"px";
+					if(This.offsetWidth>=230)/*input标签的宽度*/
+					clearInterval(This.time);
+				},30)
+		}
+		aA[i].onmouseout=function(){
+				clearInterval(this.time);
+				var This=this;
+				this.time=setInterval(function(){
+					This.style.width=This.offsetWidth-8+"px";
+					if(This.offsetWidth<=180){
+						This.style.width='180px';
+						clearInterval(This.time);
+					}
+				},30)
+		}
+	}
+}
+//实现显示详情选项
+var aa=document.getElementById("details");
+function showtext(){
+    details.style.display="block";
+  }
+</script>
 </head>
 <body>
 
 	<div class="topBar clearfix">
 		<h1 class="topBarLogo"><b></b>吃了么</h1>
-		<div class="topBarList">
-			<a href="index.html" class="homePage">首页</a>
+		<div class="topBarList" id="topBarList">
+			<a href="index.html" target="_blank">首页</a>
 			<a href="#">我的订单</a>
 			<a href="#">加盟合作</a>
 		</div>
@@ -38,7 +137,7 @@
 			<a href="#"><i class="fa fa-mobile"></i>手机应用</a>
 		</nav>
 		<div class="topBarNavLogin">
-			   <a href="#"><i class="fa fa-user"></i>登录/注册</a>
+			   <a href="#"><i class="fa fa-user"></i>登录/</a><a href="#">注册</a>
 		</div>
 	</div>
 	<div class="sideBar">
@@ -51,13 +150,44 @@
 		</div>
 	</div>
 	<div class="container clearfix">
-		<div class="searchBox">
-			<a href="#"><i class="fa fa-search"></i></a>
-			<label>搜索商家/美食</label>
-			<input class="searchInput">
+		<div class="wrapperBox">
+			<div class="searchBox clearfix">
+				<i class="fa fa-search"></i>
+				<span></span><input id="change" class="searchInput" placeholder="搜索商家/美食...">
+			</div>
 		</div>
-		<div class="classify"></div>
-		<div class="contentBox"></div>
+		<div class="classifyWrapper">
+			<div class="classify" id="classify">
+				<span>商家分类:</span>
+				<a href="#">全部商家</a>
+				<a href="#" onclick="showtext()">美食</a>
+				<a href="#">快餐便当</a>
+				<a href="#">特色菜系</a>
+				<a href="#">异国料理</a>
+				<a href="#">小吃宵夜</a>
+				<a href="#">甜品饮品</a>
+				<a href="#">果蔬生鲜</a>
+				<a href="#">鲜花蛋糕</a>
+				<a href="#">商店超市</a>
+				<a href="#" >早餐</a>
+				<a href="#">下午茶</a>
+				<a href="#">晚餐</a>
+				<span class="space"></span>
+				<a href="#">宵夜</a>
+			</div>
+			<div id="details">
+				<a href="#">全部</a>
+				<a href="#">简餐便当</a>
+				<a href="#">地方菜系</a>
+				<a href="#">小吃炸串</a>
+				<a href="#">面食粥点</a>
+				<a href="#">香锅冒菜</a>
+				<a href="#">汉堡披萨</a>
+			</div>
+		</div>
+		<div class="contentBox">
+		
+		</div>
 	</div>
 	<!-- <div class="footer clearfix">
 		<div class="footerLinks help">

@@ -8,6 +8,7 @@ ul{list-style:none;}
 .clearfix:after{display:block;overflow:hidden;clear:both;height:0;visibility:hidden;content:""}
 body{
 	background:#eee;
+	font: 400 1em/1.5 PingFang SC,Lantinghei SC,Helvetica Neue,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans;
 }
 /*topBar*/
 .topBarNav,.topBarNavLogin,.topBarList{
@@ -24,20 +25,20 @@ body{
 	background-color:#1e89e0;
 }
 .topBarList{
-	font-size:0;
+	font-size:0;/*消除a标签之间的空隙*/
 	margin-left:20px;
 }
 .topBarList a{
 	width:120px;
 	height:inherit;
-	font-size:16px;
+	font-size:16px;/*16px=1em,发现改成em，a标签的文字会被遮盖*/
 	display:inline-block;
 	text-align:center;
 }
 .topBarList a:hover{
 	background:#006bc7;
 }
-.homePage{
+.topBarList a:focus{
 	background:#006bc7;
 }
 .topBarLogo{
@@ -51,11 +52,15 @@ body{
 	padding-right:5px;
 	background:url(../images/logo.png) no-repeat;
 }
+.topBarNavLogin{
+	float:right;
+	margin-right:120px;
+}
 .topBarNav a,.topBarNavLogin a{
-	font-size:14px;
+	font-size:0.875em;/*14px=0.875em*/
 }
 .topBarNav{
-	margin:0 80px 0 160px;
+	margin:0 40px 0 160px;
 }
 .topBarNav a{
 	margin:0 20px 0 20px;
@@ -65,7 +70,7 @@ body{
 	color:#fff;
 }
 .topBarNav .fa,.topBarNavLogin .fa{
-	font-size:23px;
+	font-size:1.4375em;/*23px=1.4375em*/
 }
 .topBar .fa{
 	padding-right:5px;
@@ -125,12 +130,11 @@ body{
 	color:#fff;
 	background-color:#666;
 	
-	font-size:14px;
+	font-size:0.875em;/*14px=0.875em*/
 	/*设置圆角*/
 	-webkit-border-radius:5px;  
     -moz-border-radius:5px;  
     border-radius:5px; 
-	
 }
 .order:hover b,.msg:hover b{/*设置三角形箭头*/
 	position:absolute;  
