@@ -6,6 +6,7 @@
 <link type="text/css" rel="stylesheet" href="CSS/main.css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="shortcut icon" href="favicon.ico">
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 <style type="text/css">
 .container{
 	width:1200px;
@@ -59,14 +60,17 @@
 .classify span{
 	color:#999;
 }
+.classify a:nth-child(2){
+	background:#f6f6f6;
+}
 .classify a:hover,.classify a:focus{
 	background:#f6f6f6;
 }
 .classify a:focus{
 	color:#fff;
 }
-.space{
-	margin-right:70px;
+.last{
+	margin-left:70px;
 }
 #details{
 	display: none;
@@ -210,6 +214,8 @@ var aa=document.getElementById("details");
 function showtext(){
     details.style.display="block";
   }
+//实现选中
+
 </script>
 </head>
 <body>
@@ -217,8 +223,8 @@ function showtext(){
 	<div class="topBar clearfix">
 		<h1 class="topBarLogo"><b></b>吃了么</h1>
 		<div class="topBarList" id="topBarList">
-			<a href="index.html">首页</a>
-			<a href="#">我的订单</a>
+			<a href="index.html" class="change">首页</a>
+			<a href="order.html">我的订单</a>
 			<a href="#">加盟合作</a>
 		</div>
 		<nav class="topBarNav">
@@ -227,7 +233,7 @@ function showtext(){
 			<a href="#"><i class="fa fa-mobile"></i>手机应用</a>
 		</nav>
 		<div class="topBarNavLogin">
-			   <a href="#"><i class="fa fa-user"></i>登录/</a><a href="#">注册</a>
+			   <a href="login.html"><i class="fa fa-user"></i>登录/注册</a>
 		</div>
 	</div>
 	<div class="sideBar">
@@ -262,8 +268,7 @@ function showtext(){
 				<a href="#" >早餐</a>
 				<a href="#">下午茶</a>
 				<a href="#">晚餐</a>
-				<span class="space"></span>
-				<a href="#">宵夜</a>
+				<a href="#" class="last">宵夜</a>
 			</div>
 			<div id="details">
 				<a href="#">全部</a>
@@ -277,9 +282,9 @@ function showtext(){
 		</div>
 		<div class="contentBox">
 		<!-- ********商家********* -->
-			<a href="#" class="resBox clearfix">
+			<a href="shopDetail.html" class="resBox clearfix">
 				<div class="restaurantLogo">
-					<img alt="站前餐馆" src="images/resLogo.jpeg">
+					<img alt="站前餐馆" src="images/resLogo.jpg">
 					<span>30分钟</span><!-- 平均送达时间 -->
 				</div>
 				<div class="resIntroduce">
@@ -293,7 +298,7 @@ function showtext(){
 			</a>
 			<a href="#" class="clearfix">
 				<div class="restaurantLogo">
-					<img alt="站前餐馆" src="images/resLogo.jpeg">
+					<img alt="站前餐馆" src="images/resLogo.jpg">
 					<span>30分钟</span><!-- 平均送达时间 -->
 				</div>
 				<div class="resIntroduce">
@@ -307,7 +312,7 @@ function showtext(){
 			</a>
 			<a href="#" class="clearfix">
 				<div class="restaurantLogo">
-					<img alt="站前餐馆" src="images/resLogo.jpeg">
+					<img alt="站前餐馆" src="images/resLogo.jpg">
 					<span>30分钟</span><!-- 平均送达时间 -->
 				</div>
 				<div class="resIntroduce">
@@ -321,7 +326,7 @@ function showtext(){
 			</a>
 			<a href="#" class="clearfix">
 				<div class="restaurantLogo">
-					<img alt="站前餐馆" src="images/resLogo.jpeg">
+					<img alt="站前餐馆" src="images/resLogo.jpg">
 					<span>30分钟</span><!-- 平均送达时间 -->
 				</div>
 				<div class="resIntroduce">
@@ -335,7 +340,7 @@ function showtext(){
 			</a>
 			<a href="#" class="clearfix">
 				<div class="restaurantLogo">
-					<img alt="站前餐馆" src="images/resLogo.jpeg">
+					<img alt="站前餐馆" src="images/resLogo.jpg">
 					<span>30分钟</span><!-- 平均送达时间 -->
 				</div>
 				<div class="resIntroduce">
@@ -349,7 +354,7 @@ function showtext(){
 			</a>
 			<a href="#" class="clearfix">
 				<div class="restaurantLogo">
-					<img alt="站前餐馆" src="images/resLogo.jpeg">
+					<img alt="站前餐馆" src="images/resLogo.jpg">
 					<span>30分钟</span><!-- 平均送达时间 -->
 				</div>
 				<div class="resIntroduce">
@@ -363,7 +368,7 @@ function showtext(){
 			</a>
 			<a href="#" class="clearfix">
 				<div class="restaurantLogo">
-					<img alt="站前餐馆" src="images/resLogo.jpeg">
+					<img alt="站前餐馆" src="images/resLogo.jpg">
 					<span>30分钟</span><!-- 平均送达时间 -->
 				</div>
 				<div class="resIntroduce">
@@ -377,7 +382,7 @@ function showtext(){
 			</a>
 			<a href="#" class="clearfix">
 				<div class="restaurantLogo">
-					<img alt="站前餐馆" src="images/resLogo.jpeg">
+					<img alt="站前餐馆" src="images/resLogo.jpg">
 					<span>30分钟</span><!-- 平均送达时间 -->
 				</div>
 				<div class="resIntroduce">

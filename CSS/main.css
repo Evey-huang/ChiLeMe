@@ -35,10 +35,10 @@ body{
 	display:inline-block;
 	text-align:center;
 }
-.topBarList a:hover{
+.change{
 	background:#006bc7;
 }
-.topBarList a:focus{
+.topBarList a:hover{
 	background:#006bc7;
 }
 .topBarLogo{

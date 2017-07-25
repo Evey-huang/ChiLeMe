@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>吃了么-商家详情页</title>
+<script src="js/jquery-1.10.2.min.js"></script>
+<link type="text/css" rel="stylesheet" href="CSS/main.css">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="shortcut icon" href="favicon.ico">
+<style type="text/css">
+/*头部*/
+.container{
+	width:1423px;
+	height:200px;
+	background:url(images/back1.jpg) no-repeat 30% 30%;
+}
+/*餐馆介绍*/
+.liimg{
+	height:130px;
+	width:400px;
+	margin-top:20px;
+	margin-left:60px;
+	display:inline-block;
+}
+.liimg .img1{
+	margin-left:10px;
+	border-radius:50%;
+	border:3px solid #C8C8C8;
+}
+
+.liimg .title1{
+	height:70px;
+	width:270px;
+	float:right;
+	margin-top:15px;
+	display:inline-block;
+}
+.liimg .title1 h2{
+	margin-top:10px;
+}
+.liimg .title1 p{
+	display:inline-block;
+	font-size:16px;
+}
+.liimg .title1 .star{
+	height:20px;
+	width:100px;
+	display:inline-block;
+}
+.liimg .title1 .star img{
+	height:20px;
+	width:20px;
+}
+
+/*搜索框*/
+.wrapperBox{
+	float:right;
+	margin:60px 0px 50px 0;
+	height:32px;
+	display:inline-block;
+}
+.searchBox{
+	float:right;
+	position:relative;
+	z-index:3;
+	background:#fff;
+	border:1px solid #ccc;
+	color:#999;	
+}
+.searchBox i{
+	float:right;
+	color:#999;
+	width:46px;
+	height:inherit;
+	line-height:32px;
+	text-align: center;
+	font-size:20px;
+}
+.searchBox input{
+	width:180px;
+	height:30px;
+	border:0;
+	outline: none;
+}
+.searchBox span{
+	padding-right:10px;
+}
+
+/*中间部分总体*/
+.middle{
+	height:600px;
+	width:1423px;
+	margin-top:20px;
+}
+
+
+/*中间头部，索引*/
+.middleTop{
+	height:21%;
+	width:855px;
+	margin-left:2%;	
+	border:1px solid #C8C8C8;
+	background-color:white;
+}
+
+.middleTop ul li{
+	float:left;
+}
+.middleTop ul li .span1{
+	line-height:30px;
+}
+.middleTop ul li .span2{
+	margin-top:60px;
+}
+.middleTop ul li .a1{
+	display:block;
+	height:125px;
+	width:120px;
+	text-align:center;
+	margin-left:2px;
+	background-color:pink;
+}
+.middleTop ul li .a1:hover{
+	display:block;
+	height:120px;
+	width:120px;
+	background-color:#E9CD4C;
+	border-top:10px solid #1e89e0;
+	background:url(images/icon1.png) no-repeat 50% 50%;
+}
+
+.middleTop ul li .a2{
+	display:block;
+	height:125px;
+	width:120px;
+	text-align:center;
+	margin-left:2px;
+	background-color:pink;
+}
+.middleTop ul li .a2:hover{
+	display:block;
+	height:120px;
+	width:120px;
+	background-color:#E9CD4C;
+	border-top:10px solid #1e89e0;
+	background:url(images/icon2.png) no-repeat 50% 50%;
+}
+
+.middleTop ul li .a3{
+	display:block;
+	height:125px;
+	width:120px;
+	text-align:center;
+	margin-left:2px;
+	background-color:pink;
+}
+.middleTop ul li .a3:hover{
+	display:block;
+	height:120px;
+	width:120px;
+	background-color:#E9CD4C;
+	border-top:10px solid #1e89e0;
+	background:url(images/icon3.png) no-repeat 50% 50%;
+}
+
+.middleTop ul li .a4{
+	display:block;
+	height:125px;
+	width:120px;
+	text-align:center;
+	margin-left:2px;
+	background-color:pink;
+}
+.middleTop ul li .a4:hover{
+	display:block;
+	height:120px;
+	width:120px;
+	background-color:#E9CD4C;
+	border-top:10px solid #1e89e0;
+	background:url(images/icon4.png) no-repeat 50% 50%;
+}
+
+.middleTop ul li .a5{
+	display:block;
+	height:125px;
+	width:120px;
+	text-align:center;
+	margin-left:2px;
+	background-color:pink;
+}
+.middleTop ul li .a5:hover{
+	display:block;
+	height:120px;
+	width:120px;
+	background-color:#E9CD4C;
+	border-top:10px solid #1e89e0;
+	background:url(images/icon5.png) no-repeat 50% 50%;
+}
+
+.middleTop ul li .a6{
+	display:block;
+	height:125px;
+	width:120px;
+	text-align:center;
+	margin-left:2px;
+	background-color:pink;
+}
+.middleTop ul li .a6:hover{
+	display:block;
+	height:120px;
+	width:120px;
+	background-color:#E9CD4C;
+	border-top:10px solid #1e89e0;
+	background:url(images/icon6.png) no-repeat 50% 50%;
+}
+
+.middleTop ul li .a7{
+	display:block;
+	height:125px;
+	width:120px;
+	text-align:center;
+	margin-left:2px;
+	background-color:pink;
+}
+.middleTop ul li .a7:hover{
+	display:block;
+	height:120px;
+	width:120px;
+	background-color:#E9CD4C;
+	border-top:10px solid #1e89e0;
+	background:url(images/icon7.png) no-repeat 50% 50%;
+}
+
+.p1,.p2{
+	display:block;
+}
+
+.p1{
+	font-size:12px;	
+}
+
+
+
+
+.middleHot{
+	width:858px;
+	margin-left:2%;	
+}
+
+.middleHot .hot{
+	height:50px;
+	width:300px;
+	display:block;
+	line-height:50px;
+	font-size:26px;
+}
+
+.middleHot .hot span{
+	font-size:13px;
+}
+
+.middleHot .dish{
+	height:100px;
+	width:420px;
+	margin-bottom:30px;
+	display:inline-block;
+	background-color:white;
+	border:1px solid #D0D0D0;
+}
+
+.middleHot .dish .title{
+	height:50px;
+	width:310px;
+	float:right;
+	display:inline-block;
+}
+.middleHot .dish .title h4{
+	margin-top:10px;
+}
+.middleHot .dish .title p{
+	display:inline-block;
+	font-size:12px;
+}
+.middleHot .dish .title .star{
+	height:20px;
+	width:50px;
+	display:inline-block;
+}
+
+.middleHot .dish .price{
+    position:absolute;
+	height:30px;
+	width:300px;
+	margin-left:10px;
+	margin-top:60px;
+	display:inline-block;
+}
+
+.middleHot .dish .price span{
+	height:20px;
+	width:20px;
+}
+.middleHot .dish span:before{
+	content:"\00a5";
+	font-size:12px;
+	marign-right:5px;
+}
+
+.middleHot .dish .price button{
+display: inline-block;
+border: 0;
+cursor: pointer;
+width: 90px;
+height: 26px;
+line-height: 26px;
+border-radius: 20px;
+text-align: center;
+margin-left:170px;
+outline: 0;
+background-color:#0089dc;
+}
+
+
+.inform{
+	height:340px;
+	width:350px;
+	background-color:white;
+	margin-right:70px;
+	float:right;
+	border:1px solid #D0D0D0;
+}
+.inform .informTop{
+	height:40px;
+	width:350px;
+	background-color:#1e89e0;
+}
+
+.inform .informTop span{
+	line-height:40px;
+	font-size:20px;
+	margin-left:10px;
+	color:white;
+}
+.inform p{
+	font-size:16px;
+	text-indent:20px;
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:10px;
+}
+.inform .informMiddle{
+	height:60px;
+	width:350px;
+	margin-top:90px;
+	background-color:#F0F0F0;
+}
+.inform .informMiddle span{
+	margin-top:10px;
+	margin-left:20px;
+   display:block;
+}
+.inform button{
+    height:50px;
+	width:350px;
+	border:0;
+	font-size:16px;
+	border-top:1px solid #D0D0D0; 
+	background-color:white;
+}
+
+
+
+</style>
+</head>
+<body>
+<div class="container clearfix">
+	<div class="topBar clearfix">
+		<h1 class="topBarLogo"><b></b>吃了么</h1>
+		<div class="topBarList">
+			<a href="index.html" class="homePage">首页</a>
+			<a href="order.html">我的订单</a>
+			<a href="#">加盟合作</a>
+		</div>
+		<nav class="topBarNav">
+			<a href="#"><i class="fa fa-user-o"></i>服务中心</a>
+			<a href="#">规则中心</a>
+			<a href="#"><i class="fa fa-mobile"></i>手机应用</a>
+		</nav>
+		<div class="topBarNavLogin">
+			   <a href="login.html"><i class="fa fa-user"></i>登录/注册</a>
+		</div>
+	</div>
+	<div class="sideBar">
+		<div class="sideBarTabs">
+			<a class="tabsBtn order" href="#" tooltips="我的订单"><i class="fa fa-reorder"></i><span>我的订单</span><b class="trangle"></b></a>
+			<div class="separator"></div>
+			<a class="tabsBtn shopCar" href="#"><i class="fa fa-cart-plus"></i>购物车</a>
+			<div class="separator"></div>
+			<a class="tabsBtn msg" href="#" tooltips="我的信息"><i class="fa fa-envelope-o"></i><span>我的信息</span><b></b></a>
+		</div>
+	</div>
+	
+	       
+			<div class="liimg" id="liimg">
+			   <img src="images/shop.jpg" class="img1">
+			   <div class="title1">
+               <h2>站前餐馆</h2>
+	               <div class="star">
+	               <img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star1.png">
+	               </div>
+	               <p>(80)</p>
+	               <p>月售420份</p>
+			   </div> 
+			</div>   
+				 <div class="wrapperBox">
+				<div class="searchBox clearfix">
+					<i class="fa fa-search"></i>
+					<span></span><input id="change" class="searchInput" placeholder="搜索商家/美食...">
+				</div>
+		     </div>
+		
+		<div class="classify"></div>
+		<div class="contentBox"></div>
+	</div>
+	
+	<div class="">
+	
+	</div>
+	
+	
+	
+	<div class="middle">
+	<div class="inform">
+	 <div class="informTop ">
+	   <span>商家公告</span>
+	   	 </div>
+	   	 <p>如有什么问题请联系商家，商家会给你一个满意的答复，欢迎各位亲到站前餐馆点餐，请各位亲提前订餐，优惠多多，食材新鲜。欢迎新老顾客的支持，不要忘了给好评，谢谢各位亲</p>
+	   	 
+	 <div class="informMiddle">
+	 <span>配送说明：</span>
+	 <span>免费配送</span>
+	 </div>
+	 <button>举报商家</button>
+	</div>
+		<div class="middleTop"  id="float_banner">
+			
+			<ul>
+			<li>
+			<a href="#" class="a6">
+			<span class="p2 span1">所有商品</span>
+			<span class="p1 span2">EVERYTHING*</span>
+			</a>
+			</li>
+				<li id="li1">
+					<a href="#" class="a1">
+					<span class="p2 span1">热销</span>
+					<span class="p1 span2">HOT*</span>
+					</a>
+				</li>	
+				
+			<li>
+			<a href="#" class="a2">
+			<span class="p2 span1">优惠</span>
+			<span class="p1 span2">PRIVILEGE*</span>
+			</a>
+			</li>
+			
+			<li>
+			<a href="#" class="a3">
+			<span class="p2 span1">米饭</span>
+			<span class="p1 span2">RICE*</span>
+			</a>
+			</li>
+			
+			<li>
+			<a href="#" class="a4">
+			<span class="p2 span1">小吃面食</span>
+			<span class="p1 span2">NOODLE*</span>
+			</a>
+			</li>
+			<li>
+			<a href="#" class="a5">
+			<span class="p2 span1">盖饭</span>
+			<span class="p1 span2">GAIFAN*</span>
+			</a>
+			</li>
+			
+			<li>
+			<a href="#" class="a7">
+			<span class="p2 span1">煎蛋</span>
+			<span class="p1 span2">JIANDAN*</span>
+			</a>
+			</li>			
+			</ul>	
+		</div>
+		
+	<div class="middleHot">
+		<span class="hot">热销<span>大家喜欢吃，才叫真好吃~</span></span>
+			<div class="dish">
+			   <img src="images/dish1.jpeg">
+			   <div class="title">
+               <h4>卤鸡腿拌饭</h4>
+	               <div class="star">
+	               <img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star1.png">
+	               </div>
+	               <p>(80)</p>
+	               <p>月售420份</p>
+			   </div>
+				   <div class="price">
+				   <span>15</span>
+				   <button>加入购物车</button>
+				   </div>
+			</div>
+			<div class="dish">
+			    <img src="images/dish2.jpeg">
+			   <div class="title">
+               <h4>盐煎肉盖饭</h4>
+	               <div class="star">
+	               <img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star1.png">
+	               </div>
+	               <p>(6)</p>
+	               <p>月售420份</p>
+			   </div>
+				   <div class="price">
+				   <span>15</span>
+				   <button>加入购物车</button>
+				   </div>
+			</div>
+			<div class="dish">
+			   <img src="images/dish1.jpeg">
+			   <div class="title">
+               <h4>卤鸡腿拌饭</h4>
+	               <div class="star">
+	               <img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star1.png">
+	               </div>
+	               <p>(80)</p>
+	               <p>月售420份</p>
+			   </div>
+				   <div class="price">
+				   <span>15</span>
+				   <button>加入购物车</button>
+				   </div>
+			</div>
+			<div class="dish">
+			    <img src="images/dish2.jpeg">
+			   <div class="title">
+               <h4>盐煎肉盖饭</h4>
+	               <div class="star">
+	               <img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star1.png">
+	               </div>
+	               <p>(6)</p>
+	               <p>月售420份</p>
+			   </div>
+				   <div class="price">
+				   <span>15</span>
+				   <button>加入购物车</button>
+				   </div>
+			</div>
+			<div class="dish">
+			   <img src="images/dish1.jpeg">
+			   <div class="title">
+               <h4>卤鸡腿拌饭</h4>
+	               <div class="star">
+	               <img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star1.png">
+	               </div>
+	               <p>(80)</p>
+	               <p>月售420份</p>
+			   </div>
+				   <div class="price">
+				   <span>15</span>
+				   <button>加入购物车</button>
+				   </div>
+			</div>
+			<div class="dish">
+			    <img src="images/dish2.jpeg">
+			   <div class="title">
+               <h4>盐煎肉盖饭</h4>
+	               <div class="star">
+	               <img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star1.png">
+	               </div>
+	               <p>(6)</p>
+	               <p>月售420份</p>
+			   </div>
+				   <div class="price">
+				   <span>15</span>
+				   <button>加入购物车</button>
+				   </div>
+			</div>
+			<div class="dish">
+			    <img src="images/dish2.jpeg">
+			   <div class="title">
+               <h4>盐煎肉盖饭</h4>
+	               <div class="star">
+	               <img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star1.png">
+	               </div>
+	               <p>(6)</p>
+	               <p>月售420份</p>
+			   </div>
+				   <div class="price">
+				   <span>15</span>
+				   <button>加入购物车</button>
+				   </div>
+			</div>
+			<div class="dish">
+			   <img src="images/dish1.jpeg">
+			   <div class="title">
+               <h4>卤鸡腿拌饭</h4>
+	               <div class="star">
+	               <img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star1.png">
+	               </div>
+	               <p>(80)</p>
+	               <p>月售420份</p>
+			   </div>
+				   <div class="price">
+				   <span>15</span>
+				   <button>加入购物车</button>
+				   </div>
+			</div>
+			
+	</div>	
+	<div class="middleHot">
+		<span class="hot">优惠<span>美味又实惠，大家快来抢！</span></span>
+			<div class="dish">
+			   <img src="images/dish1.jpeg">
+			   <div class="title">
+               <h4>卤鸡腿拌饭</h4>
+	               <div class="star">
+	               <img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star1.png">
+	               </div>
+	               <p>(80)</p>
+	               <p>月售420份</p>
+			   </div>
+				   <div class="price">
+				   <span>15</span>
+				   <button>加入购物车</button>
+				   </div>
+			</div>
+			<div class="dish">
+			    <img src="images/dish2.jpeg">
+			   <div class="title">
+               <h4>盐煎肉盖饭</h4>
+	               <div class="star">
+	               <img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star1.png">
+	               </div>
+	               <p>(6)</p>
+	               <p>月售420份</p>
+			   </div>
+				   <div class="price">
+				   <span>15</span>
+				   <button>加入购物车</button>
+				   </div>
+			</div>
+			<div class="dish">
+			   <img src="images/dish1.jpeg">
+			   <div class="title">
+               <h4>卤鸡腿拌饭</h4>
+	               <div class="star">
+	               <img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star1.png">
+	               </div>
+	               <p>(80)</p>
+	               <p>月售420份</p>
+			   </div>
+				   <div class="price">
+				   <span>15</span>
+				   <button>加入购物车</button>
+				   </div>
+			</div>
+			<div class="dish">
+			    <img src="images/dish2.jpeg">
+			   <div class="title">
+               <h4>盐煎肉盖饭</h4>
+	               <div class="star">
+	               <img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star1.png">
+	               </div>
+	               <p>(6)</p>
+	               <p>月售420份</p>
+			   </div>
+				   <div class="price">
+				   <span>15</span>
+				   <button>加入购物车</button>
+				   </div>
+			</div>
+			<div class="dish">
+			   <img src="images/dish1.jpeg">
+			   <div class="title">
+               <h4>卤鸡腿拌饭</h4>
+	               <div class="star">
+	               <img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star1.png">
+	               </div>
+	               <p>(80)</p>
+	               <p>月售420份</p>
+			   </div>
+				   <div class="price">
+				   <span>15</span>
+				   <button>加入购物车</button>
+				   </div>
+			</div>
+			<div class="dish">
+			    <img src="images/dish2.jpeg">
+			   <div class="title">
+               <h4>盐煎肉盖饭</h4>
+	               <div class="star">
+	               <img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star.png"><img src="images/star1.png">
+	               </div>
+	               <p>(6)</p>
+	               <p>月售420份</p>
+			   </div>
+				   <div class="price">
+				   <span>15</span>
+				   <button>加入购物车</button>
+				   </div>
+			</div>
+			
+	</div>	
+	
+	</div>
+	
+	<script>
+	var speed = 100;
+	var scrollTop = null;
+	var hold = 0;
+	var float_banner;
+	var pos = null;
+	var timer = null;
+	var moveHeight = null;
+	float_banner = document.getElementById("float_banner");
+	window.onscroll=scroll_ad;
+	function scroll_ad(){
+	 scrollTop = document.documentElement.scrollTop+document.body.scrollTop;
+	 pos = scrollTop - float_banner.offsetTop;
+	 pos = pos/10
+	 moveHeight = pos>0?Math.ceil(pos):Math.floor(pos);
+	 if(moveHeight!=0){
+	  float_banner.style.top = float_banner.offsetTop+moveHeight+"px";
+	  setTimeout(scroll_ad,speed);
+	 }
+	}
+
+	
+	
+	
+	</script>
+</body>
+</html>

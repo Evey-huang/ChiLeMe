@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>吃了么_登陆</title>
+	<link rel="stylesheet" href="CSS/login.css">
+	<link rel="shortcut icon" href="favicon.ico">
+</head>
+<body >
+
+      <div class="bgChange">
+	       <img id="bg" src="images/bg4.jpg" alt="背景" title="刺果">
+      </div>
+      <div class="head">
+	  <div>
+		<img src="images/eat.png" alt="吃了吗">
+		<img src="images/title-20.png" alt="让外卖，送的快">
+	  </div>
+
+      </div>
+       <div class="content">
+	   <div class="box">
+		<span id="login" >账号登陆</span>
+		<span id="sign" >手机注册</span>
+
+
+		<div id="loginDiv" style="display: block;">
+			<form action="#" class="box">
+				<div class="item1 ">
+					<input type="text" id="username" class="inputBox1" value=""  placeholder="请输入账户">
+					<b></b>
+				</div>
+				<div class="item2">
+					<input type="password" id="pwd" class="inputBox1" value=""  placeholder="请输入密码">
+					<b></b>
+				</div>
+				<div>
+					<input type="submit" id="loginSubmit" class="botton"  value="登录" >
+				</div>
+			</form>
+			<div class="ohter">
+				<a href="#">忘记密码？</a>
+			</div>
+		</div>
+
+		<div id="signDiv" style="display:none;">
+			 <form action="#" class="box" onsubmit="">
+				<div class="item">
+					<div class="username">
+						<input type="text"  class="inputBox2" value="" name="sname"  placeholder="选请输入你的手机号码">
+						<b class="tips"></b>
+					</div>
+					<div class="password">
+						<input type="password"  class="inputBox2" value="" name="password1" placeholder="设置一个密码">
+						<b class="tips"></b>
+					</div>
+					<div class="sure">
+						<input type="password"  class="inputBox2" value="" name="password2" placeholder="再次输入密码">
+						<b class="tips"></b>
+					</div>
+					<div class="verify">
+						<input type="text"  class="inputBox2" value="" name="verifycode" placeholder="输入验证码">
+						<span><img src="PHP/verifyCode.php" alt="验证码"></span>
+						<b class="tips"></b>
+					</div>
+					<div>
+						<input type="submit" class="botton" id="signSubmit" name="signSubmit" value="注册" >
+					</div>
+				</div>
+			 </form>
+			  <div class="ohter">
+				<a href="#">注册协议</a>
+			  </div>
+		    </div>
+	        </div>
+        </div>
+		<div class="introduce">
+
+			<div class="part">
+				<div class="centerBox">
+					<h2>随时随地 点你喜欢</h2>
+					<p class="say_something">
+						覆盖涪陵本地优质外卖商家、快餐和特色美食，当然也有家常小菜，
+						</br>
+						干锅汤锅麻辣香锅，小吃烧烤奶茶，总有你喜欢。
+					</p>
+					<img src="images/introduce_pic1.jpg" alt="">
+				</div>
+
+				<div class="centerBox centerBox_color">
+					<h2>加入我们 让生活更轻松</h2>
+					<p class="say_something">
+						你还在为每天每个饭点焦虑吃什么的问题而烦恼吗，上吃了吗，
+						</br>
+						总有你更多的选择！
+					</p>
+					<div class="introduce_pic">
+						<img src="images/introduce_pic2.jpg" alt="">
+						<img src="images/erweima.png" alt="">
+					</div>
+				</div>
+			</div>
+
+			<div class="footer">
+				<div class="centerBox">
+					<p>
+						<a href="#">加入我们</a>
+						<a href="#">联系我们</a>
+					</p>
+					<p>技术支持Team.S&nbsp;&nbsp;copyright&copy&nbsp;2004-2017&nbsp;&nbsp;Team.S 版权所有</p>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+</body>
+<script  type="text/javascript" src="js/jquery.js"></script>
+<script  type="text/javascript" src="js/reg.js"></script>
+
+<script type="text/javascript">
+
+
+    $('#login').click(function () {
+        $('#loginDiv').show();
+        $('#signDiv').hide();
+    })
+    $('#sign').click(function () {
+        $('#loginDiv').hide();
+        $('#signDiv').show();
+    })
+
+</script>
+</html>
