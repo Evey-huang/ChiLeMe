@@ -1,8 +1,7 @@
 body{
 	padding: 0;
 	margin: 0;
-	min-width: 460px;
-	min-height:470px;
+	min-width: 880px;
 }
 ul li{
 	list-style-type: none;
@@ -13,23 +12,32 @@ a{
 }
 .head img:hover{
 	cursor: pointer;
+
 }
 .head{
-	/*position: fixed;*/
 	width:340px;
 	height:auto;
-	/*margin-left: 100px;*/
 	margin:0 auto;
 	margin-top:100px;
 }
-
-.bgChange img{
+.bgChange {
 	position: absolute;
 	top:0;
 	left:0;
 	width: 100%;
-	height:680px;
+    height: 680px;    
+    /*设置头部背景的高度固定为680px*/
+	z-index: -1;
 	overflow: hidden;
+	/*里面的图片超出大小则隐藏*/
+}
+.bgChange img{
+
+	width:100% ;
+	/*设置图片的宽度为100% 让图片自适应屏幕大小*/
+	min-width: 1208px;
+	min-height:680px;
+	/*设置图片最小宽高 防止图片收缩太小*/
 	z-index: -1;
 }
 
@@ -196,10 +204,8 @@ a{
 	height:41px;
 	position: absolute;
 	overflow:hidden;
-	/*border: 1px solid blue;*/
 	right:47px;
 	top: 10px;
-	/*background: url("../img/verifyPic.png");*/
 }
 
 

@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>吃了么-首页</title>
-<link type="text/css" rel="stylesheet" href="CSS/main.css">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width">
+<title>吃了么_首页</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+<link type="text/css" rel="stylesheet" href="css/main.css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/bootstrap-theme.css">
 <link rel="shortcut icon" href="favicon.ico">
-<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script src="js/modernizr.js"></script>
+
 <style type="text/css">
+/*------中部内容 container------*/
 .container{
 	width:1200px;
 	margin:0 auto;
 }
-/*搜索框部分*/
+/*------搜索框部分 searchBox-----*/
 .wrapperBox{
 	margin:10px 0px 50px 0;
 	height:32px;
@@ -43,7 +51,7 @@
 .searchBox span{
 	padding-right:10px;
 }
-/*分类部分*/
+/*------搜索框下方分类部分 classify------*/
 .classifyWrapper{
 	padding:10px 0 0 10px;
 	background:#fff;
@@ -55,7 +63,7 @@
 	width:40px;
 	height:36px;
 	line-height:36px;
-	padding:5px 15px;
+	padding:5px 20px;
 }
 .classify span{
 	color:#999;
@@ -69,9 +77,10 @@
 .classify a:focus{
 	color:#fff;
 }
-.last{
+/*.last{
 	margin-left:70px;
-}
+}*/
+/*点击某个分类展开更详细的分类 details*/
 #details{
 	display: none;
 	background:#f6f6f6;
@@ -89,7 +98,7 @@
 	color:#fff;
 	height:40px;
 }
-/*主体部分 contentBox*/
+/*-------主体部分 contentBox------*/
 .contentBox{
 	margin-top: 20px;
 	background: #fff;
@@ -209,17 +218,16 @@ window.onload=function(){
 		}
 	}
 }
-//实现显示详情选项
+//实现分类显示详情选项
 var aa=document.getElementById("details");
 function showtext(){
     details.style.display="block";
   }
-//实现选中
 
 </script>
 </head>
 <body>
-
+<!-- topBar结束 头部菜单 -->
 	<div class="topBar clearfix">
 		<h1 class="topBarLogo"><b></b>吃了么</h1>
 		<div class="topBarList" id="topBarList">
@@ -236,16 +244,57 @@ function showtext(){
 			   <a href="login.html"><i class="fa fa-user"></i>登录/注册</a>
 		</div>
 	</div>
-	<div class="sideBar">
-		<div class="sideBarTabs">
-			<a class="tabsBtn order" href="#" tooltips="我的订单"><i class="fa fa-reorder"></i><span>我的订单</span><b class="trangle"></b></a>
-			<div class="separator"></div>
-			<a class="tabsBtn shopCar" href="#"><i class="fa fa-cart-plus"></i>购物车</a>
-			<div class="separator"></div>
-			<a class="tabsBtn msg" href="#" tooltips="我的信息"><i class="fa fa-envelope-o"></i><span>我的信息</span><b></b></a>
-		</div>
-	</div>
-	<div class="container clearfix">
+<!-- sidebar 侧边栏 -->
+	<div id="sidebar">
+        <div id="wrap">
+            <div id="prof" class="item">
+                <a class="order">
+                    <i class="fa fa-reorder"></i>
+                    <span>我的订单</span><b class="trangle"></b>
+                </a>
+            </div>
+            <div id="asset" class="item">
+                <span>
+                    <i class="fa fa-cart-plus"></i>
+                </span>
+                <div>
+                                                 购物车
+                </div>
+            </div>
+            <div id="brand" class="item">
+                <a class="msg">
+                    <i class="fa fa-envelope-o"></i>
+                    <span>我的信息</span><b class="trangle"></b>
+                </a>
+            </div>  
+        </div>
+        <div id="closeBar"><!-- 将侧边栏收进去 -->
+            <div>
+                <i class="fa fa-remove"></i>
+            </div>
+        </div>
+    </div><!-- sideBar结束 -->
+    <div id="asset-content" class="nav-content"><!-- 侧边栏滑出内容 -->
+        <div class="nav-con-close">
+            <i class="fa fa-angle-left fa-2x"></i>
+        </div>
+        <div class="carContent clearfix">
+            <h3>购物车</h3>
+            <div class="carChoose">
+                <div class="chooseTitle">
+	                <h4>1号购物车</h4>
+		            <a href="#">[清空]</a>
+                </div>
+	            <p>金桔柠檬</p>
+            </div>
+            <div class="count">
+	            <p>共<span>1</span>份，总计￥<span>5</span></p>
+	            <button>结算</button>
+            </div>
+        </div>
+    </div>
+<!-- container 中部内容 -->
+    <div class="container clearfix">
 		<div class="wrapperBox">
 			<div class="searchBox clearfix">
 				<i class="fa fa-search"></i>
@@ -396,6 +445,7 @@ function showtext(){
 			</a>
 		</div><!-- *********商家结束********** -->
 	</div>
+<!-- footer 页脚 -->
 	<div class="footer clearfix">
 		<div class="footerLinks help">
 			<h3 class="linksTitle">用户帮助</h3>
@@ -438,6 +488,11 @@ function showtext(){
 		           技术支持Team.S&nbsp;&nbsp;copyright&copy&nbsp;2004-2017&nbsp;&nbsp;Team.S 版权所有
 		</div>
 	</div>
-
+	<!-- 页脚结束 -->
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+    window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>');
+    </script>
+    <script src="js/sidebar.js"></script>
 </body>
 </html>

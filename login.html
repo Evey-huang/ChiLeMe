@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>吃了么_登陆</title>
-	<link rel="stylesheet" href="CSS/login.css">
+	<title>吃了么_登陆/注册</title>
+	<link rel="stylesheet" href="css/login.css">
 	<link rel="shortcut icon" href="favicon.ico">
 </head>
 <body >
@@ -60,7 +60,7 @@
 					</div>
 					<div class="verify">
 						<input type="text"  class="inputBox2" value="" name="verifycode" placeholder="输入验证码">
-						<span><img src="PHP/verifyCode.php" alt="验证码"></span>
+						<span><img src="php/verifyCode.php" alt="验证码"></span>
 						<b class="tips"></b>
 					</div>
 					<div>
@@ -111,18 +111,11 @@
 				</div>
 			</div>
 		</div>
-
-
-
-
-
 </body>
-<script  type="text/javascript" src="js/jquery.js"></script>
+<script  type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 <script  type="text/javascript" src="js/reg.js"></script>
 
 <script type="text/javascript">
-
-
     $('#login').click(function () {
         $('#loginDiv').show();
         $('#signDiv').hide();
@@ -131,6 +124,5 @@
         $('#loginDiv').hide();
         $('#signDiv').show();
     })
-
 </script>
 </html>
